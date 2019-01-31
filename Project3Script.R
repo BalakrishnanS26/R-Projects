@@ -10,11 +10,11 @@ folderdata=function(paths){
   return (dat)
 }
 
-base="C:/Users/ashle/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Revenues"
+base="C:/Users/Balakrishnan/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Revenues"
 yt_paths = list.files(base,full.names = TRUE)
 revs=folderdata(yt_paths)
 names(revs)<-c("DATE","Total.earn","AFV.earn","YT.earn","Transactions","video.id")
-revs$video.id <- gsub('C:/Users/ashle/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Revenues/Revenue',
+revs$video.id <- gsub('C:/Users/Balakrishnan/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Revenues/Revenue',
                       '', revs$video.id)
 revs$video.id <- gsub('.csv','', revs$video.id)
 
@@ -36,11 +36,11 @@ folderdata=function(paths){
 }
 
 
-base="C:/Users/ashle/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Videos"
+base="C:/Users/Balakrishnan/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Videos"
 yt_paths=list.files(base,full.names=TRUE)
 vids=folderdata(yt_paths)
 names(vids)<-c("DATE","Views","Estimated.min.watched","Avg.view.duration","Unique.cookies","video.id")
-vids$video.id <- gsub('C:/Users/ashle/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Videos/Video',
+vids$video.id <- gsub('C:/Users/Balakrishnan/OneDrive/Desktop/Quant Methods 5030/Project/Project 3/YouTube2013Attention/Videos/Video',
                       '', vids$video.id)
 vids$video.id <- gsub('.csv','', vids$video.id)
 
@@ -215,7 +215,7 @@ finaldf$daily.earnings <- ifelse(finaldf$daily.earnings>hi,hi, finaldf$daily.ear
 
 ########################################################       4         ####################################################
 #Define a video-level variable (named "annoy_later") that equals whether a video went from no
-#pre-roll advertisements to pre-roll advertisements in the post period (=1 if no pre-roll à pre-roll, =0 otherwise).
+#pre-roll advertisements to pre-roll advertisements in the post period (=1 if no pre-roll Ã  pre-roll, =0 otherwise).
 #Using this variable and regression tools, estimate the specification:
 #annoy later is 1 when the vide was not annoying at first then moved to annoyoing adds
 
